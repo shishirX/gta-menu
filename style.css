@@ -15,7 +15,7 @@ body {
 
 .header {
   height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1616917831137-f2bf4977205e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-image: url("img/gta.webp");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -39,14 +39,54 @@ body {
   font-size: 30px;
   text-align: center;
   margin: 5px 0;
-  padding: 5px 26px;
+  padding: 5px 36px;
   cursor: pointer;
   transition: all 0.2s;
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
 }
 
 .menu li:hover {
   background-color: #eee;
-  color: rgb(194, 87, 66);
+  color: rgb(34, 62, 106);
   transform: scale(1.1);
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 1000;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.overlay h3 {
+  animation: woo 2s infinite ease;
+}
+
+@keyframes woo {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hidden {
+  display: none;
 }
